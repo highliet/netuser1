@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CodePrime: </title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="../assets/favicon.png" />
+<link rel="shortcut icon" href="../assets/favicon.png" />
+<link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+<header class="clearfix">
+<a class="noafter" href="../index.html"><h1 class="logo">CodePrime</h1></a>
+<button id="navbtn">
+ <icon class="fa fa-bars"></icon>
+</button>
+<nav id="navlinks">
+ <a href="../index.html">Home</a>
+ <a href="#tutorials">Tutorials</a>
+ <a href="#references">References</a>
+</nav>
+</header>
+<main>
+<div class="navigator clearfix">
+ <a href="#ttlist" role="button">
+  <icon class="fa fa-align-left"></icon>
+ </a>
+ <button id="prevbtn">
+  <icon class="fa fa-chevron-left"></icon>
+ </button>
+ <p id="ttname">Not Found...</p>
+ <button id="nextbtn">
+  <icon class="fa fa-chevron-right"></icon>
+ </button>
+</div>
+<section class="content">
+ <h2>404 Not Found!</h2>
+ <p>Sorry, but no tutorial found. </p>
+ <a href="../index.html" role="button">
+  <icon class="fa fa-home"></icon> Home
+ </a>
+</section>
+</section>
+</main>
+<footer>
+<div id="mostvisited">
+<li><a href="../html/index.html">HTML Introduction</a></li>
+<li><a href="../cssref/index.html">CSS Reference</a></li>
+<li><a href="../howto/index.html">How To Sites</a></li>
+</div>
+<div id="links">
+ <a href="../index.html">Home</a>
+ <a href="../about.html">About</a>
+ <a href="../copyright.html">Copyright</a>
+</div>
+<div id="sclinks">
+ <a href="https://www.facebook.com/#" role="button">
+  <icon class="fa fa-facebook-square"></icon>
+ </a>
+ <a href="https://www.telegram.com/#" role="button">
+  <icon class="fa fa-telegram"></icon>
+ </a>
+ <a href="https://www.youtube.com/#" role="button">
+  <icon class="fa fa-youtube-play"></icon>
+ </a>
+</div>
+<p>Copyright &copy; <time id="yearcon">2021</time> <a href="./index.html" class="logo">CodePrime</a>. All rights reserved. </p>
+</footer>
+<div class="overlay" id="ttlist">
+ <div class="dialog"><list>
+  <a href="?page=1" class="noafter nohover"><li>HTML Intro</li></a>
+  <a href="?page=2" class="noafter nohover"><li>Where to learn HTML?</li></a>
+ </list></div>
+</div>
+<div class="overlay" id="tutorials">
+ <div class="dialog"><list>
+  <li>Learn HTML</li>
+  <li>Learn CSS</li>
+  <li>Learn <abbr tooltip="JavaScript">JS</abbr></li>
+ </list></div>
+</div>
+<div class="overlay" id="references">
+ <div class="dialog"><list>
+  <li>HTML Reference</li>
+  <li>CSS Reference</li>
+  <li><abbr tooltip="JavaScript">JS</abbr> Reference</li>
+ </list></div>
+</div>
+<script src="../assets/script.js"></script>
+<script src="../assets/viewer.js"></script>
+<script>
+var path = './html/';
+if(!window.location.search) { window.location.search = '?page=1'; }
+var query = new URLSearchParams(window.location.search);
+var pgid = query.get("page");
+var view = new viewer(path, 'page', pgid);
+</script>
+</body>
+</html>
