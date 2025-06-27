@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CodePrime: Home</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="./assets/favicon.png" />
+<link rel="shortcut icon" href="./assets/favicon.png" />
+<link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+<header class="clearfix">
+<h1 class="logo">CodePrime</h1>
+<button id="navbtn">
+ <icon class="fa fa-bars"></icon>
+</button>
+<nav id="navlinks">
+ <span>Home</span> 
+ <a href="#tutorials">Tutorials</a>
+ <a href="#references">References</a>
+</nav>
+</header>
+<main>
+<div id="block">
+ <h2>Web Development</h2>
+ <p>Learn <i>"Web Development"</i> with CodePrime for FREE!</p>
+ <a href="./about.html" role="button">Learn More</a>
+</div>
+<div class="clearfix" id="boxcont">
+ <section class="box">
+  <img src="./assets/html.png" class="circle" alt="HTML Logo" />
+  <h2>HTML</h2>
+  <p>A markup language for creating webpages. </p>
+  <a href="./html/index.html" role="button">Learn Now</a>
+ </section>
+ <section class="box">
+  <img src="./assets/css.png" class="circle" alt="HTML Logo" />
+  <h2>CSS</h2>
+  <p>A language for styling webpages. </p>
+  <a href="./css/index.html" role="button">Learn Now</a>
+ </section>
+ <section class="box">
+  <img src="./assets/js.png" class="circle" alt="HTML Logo" />
+  <h2>JavaScript (JS)</h2>
+  <p>A programming language for making webpages dynamic. </p>
+  <a href="./js/index.html" role="button">Learn Now</a>
+ </section>
+ <section class="box">
+  <div class="fakeimg circle"></div>
+  <h2>jQuery</h2>
+  <p>A <abbr tooltip="JavaScript">JS</abbr> framework.</p>
+  <a role="button" disabled>Coming Soon...</a>
+ </section>
+ <section class="box">
+  <div class="fakeimg circle"></div>
+  <h2>AngularJS</h2>
+  <p>A <abbr tooltip="JavaScript">JS</abbr> framework.</p>
+  <a role="button" disabled>Coming Soon...</a>
+ </section>
+</div>
+</main>
+<footer>
+<div id="links">
+ <a href="./index.html">Home</a>
+ <a href="./about.html">About</a>
+ <a href="./copyright.html">Copyright</a>
+</div>
+<div id="sclinks">
+ <a href="https://www.facebook.com/#" role="button">
+  <icon class="fa fa-facebook-square"></icon>
+ </a>
+ <a href="https://www.telegram.com/#" role="button">
+  <icon class="fa fa-telegram"></icon>
+ </a>
+ <a href="https://www.youtube.com/#" role="button">
+  <icon class="fa fa-youtube-play"></icon>
+ </a>
+</div>
+<p>Copyright &copy; <time id="yearcon">2021</time> <a href="./index.html" class="logo">CodePrime</a>. All rights reserved. </p>
+</footer>
+<div class="overlay" id="tutorials">
+ <div class="dialog"><list>
+  <li>Learn HTML</li>
+  <li>Learn CSS</li>
+  <li>Learn <abbr tooltip="JavaScript">JS</abbr></li>
+ </list></div>
+</div>
+<div class="overlay" id="references">
+ <div class="dialog"><list>
+  <li>HTML Reference</li>
+  <li>CSS Reference</li>
+  <li><abbr tooltip="JavaScript">JS</abbr> Reference</li>
+ </list></div>
+</div>
+<script src="./assets/script.js"></script>
+</body>
+</html>
