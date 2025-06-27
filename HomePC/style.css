@@ -1,0 +1,105 @@
+* { user-select: none; }
+figure#user_folder {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 5px;
+}
+
+figure#pc {
+	position: fixed;
+	top: 84px;
+	left: 0;
+	padding: 5px;
+}
+
+figure#browser {
+	position: fixed;
+	top: 176px;
+	left: 0;
+	padding: 5px;
+}
+
+figcaption { color: white; font-family: "Gill Sans MT"; text-align: center;}
+
+.app {
+	margin-left: 10px;
+	background: #0037a2e8;
+	border: 1px solid #0037a4e8;
+}
+
+.folder {
+	padding: 10px;
+	margin-right: 13px;
+	width: 100px;
+	height: 100px;
+}
+
+.folder-name {
+	width: 75px;
+	margin: 26px;
+}
+
+.window {
+	position: fixed;
+	top: 50%; left: 50%;
+	overflow: auto;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	height: 435px;
+	font-family: "Gill Sans MT";
+
+	padding: 0;
+	display: none;
+	resize: both;
+	box-sizing: border-box;
+	background-color: white;
+	border: 2px solid black;
+}
+
+.smallWindow {
+	position: fixed;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	width: 30%;
+	height: 301px;
+	font-family: "Gill Sans MT";
+
+	padding: 0;
+	resize: both;
+	display: none;
+	box-sizing: border-box;
+	background-color: white;
+	border: 2px solid black;
+}
+.window header, .smallWindow header {
+	color: white;
+	padding: 7px;
+	background: #0037a2e8;
+}
+
+.window footer, .smallWindow footer {
+	padding: 13px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 97%;
+
+	background: lightgrey;
+	border-top: 2px solid darkgrey;
+}
+
+.window #close, .smallWindow #close { float: right; font-size: 20px; }
+.viewer {
+	width: 99.5%;
+	height: 370px;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 48px;
+	background: lightgrey;
+}

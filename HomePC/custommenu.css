@@ -1,0 +1,29 @@
+#contextMenu { 
+	position: absolute; 
+	text-align: left; 
+	background: white; 
+	border: 1px solid darkgray; 
+} 
+
+#contextMenu ul { 
+	padding: 0px; 
+	margin: 0px; 
+	min-width: 150px; 
+	list-style: none; 
+} 
+
+#contextMenu ul li { 
+	padding-bottom: 7px; 
+	padding-top: 7px; 
+	border: 1px white; 
+} 
+
+#contextMenu ul li a { 
+	text-decoration: none; 
+	color: black; 
+	cursor: default;
+} 
+
+#contextMenu ul li:hover { 
+	background: lightgray; 
+} 
