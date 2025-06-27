@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SSE HomePC</title>
+	<link rel="stylesheet" type="text/css" href="custommenu.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="custommenu.js"></script>
+</head>
+<body style="background: url(./wallpaper.png); overflow: hidden;" />
+<figure id="user_folder" onclick='setSelectedColor(this, "#0037a2e8")' ondblclick='setSelectedColor(this, "transparent"); openWindow(user);  
+document.querySelectorAll(".app")[0].style.display = "inline-block";'>
+<img src="user_folder.png" width="50px" height="50px" />
+<figcaption>user</figcaption>
+</figure>
+<figure id="pc" onclick='setSelectedColor(this, "#0037a2e8")' ondblclick='setSelectedColor(this, "transparent"); openWindow(img);'>
+<img src="computer.png" width="50px" height="50px" />
+<figcaption>This PC</figcaption>
+</figure>
+<figure id="browser" onclick='setSelectedColor(this, "#0037a2e8")' ondblclick='setSelectedColor(this, "transparent"); openWindow(pcbrowser);'>
+<img src="browser.png" width="50px" height="50px" />
+<figcaption>Browser</figcaption>
+</figure>
+<div id="user" class="window">
+<header><img src="user_folder.png" width="15" height="15" />
+	user <span id="close" onclick='closeWindow(user);
+	document.querySelectorAll(".app")[0].style.display = "none";'>&times;</span></header>
+<main><br />
+<span class="folder">
+<img src="folder.png" width="75px" height="75px" /></span>
+<span class="folder">
+<img src="folder.png" width="75px" height="75px" /></span>
+<span class="folder">
+<img src="folder.png" width="75px" height="75px" /></span><br />
+<span class="folder-name">.test</span>
+<span class="folder-name">Downloads</span>
+<span class="folder-name">Videos</span>
+</main>
+<footer>3 items</footer>
+</div>
+<div id="img" class="window">
+<header><img src="image.png" width="15" height="15" />
+	Images <span id="close" onclick='closeWindow(img);'>&times;</span></header>
+<main><br />
+<div class="folder" onclick="setSelectedColor(this, '#37a2e8');" ondblclick='
+pic.style.display = "block"; setSelectedColor(this, "transparent");
+document.querySelectorAll(".app")[0].style.display = "none";'>
+<img src="image.png" width="75px" height="75px" style="margin-left:10px;"/><br />
+<span>&nbsp;wallpaper.png</span></div></main>
+<footer>1 image</footer>
+</div>
+<div id="pic" class="smallWindow">
+<header><img src="image.png" width="15" height="15" />
+	wallpaper.png <span id="close" onclick="closeWindow(pic);">&times;</span></header>
+<main style="text-align: center; margin-top: 50px;">
+	<img src="wallpaper.png" width="95.5%" height="200px">
+</main>
+</div>
+<div id="settings" class="smallWindow">
+<header>Settings <span id="close" onclick='closeWindow(settings);'>&times;</span></header>
+<main><br />
+<label for="url" style="display:block;">Wallpaper Image URL:</label><br>
+<input type="url" id="url" style="width: 95%;margin: 5px;">
+<span id="close"><button onclick="bgchange()">Apply</button>&nbsp; </span><br><br />
+<center> --- or ---</center>
+<label for="wpcolor"><h3>Choose Color</h3></label>
+<input type="color" id="wpcolor" />
+<span id="close"><button onclick="applywpcolor()">Choose</button>&nbsp; </span><br><br />
+</main>
+</div>
+<div id="pcbrowser" class="window">
+<header><img src="browser.png" width="15" height="15" />
+	Browser <span id="close" onclick='closeWindow(pcbrowser);'>&times;</span></header>
+<main><br />
+<iframe src="https://bing.com" class="viewer"></iframe>
+</div>
+<footer>
+<a href="chrome://restart" title="Click to shut down"><img src="homeOS.jpeg" width="50px" height="50px" /></a>
+<img src="folder.png" class="app" width="50px" height="50px" style="display:none;" />
+<span style="color:black;display:inline-block;width:50;height:50;position:absolute;top:5px;right:13px;text-align: center;"><script>document.write(new Date().getHours()); document.write(":");document.write(new Date().getMinutes());</script><br /><script>document.write(new Date().getDate());document.write("/");document.write(new Date().getMonth() + 1);document.write("/");document.write(new Date().getFullYear());</script></span>
+</footer>
+<div id="contextMenu" style="display:none;"> 
+	<ul>
+		<li>&nbsp; &nbsp; <a onclick="">Refresh</a></li>
+		<li>&nbsp; &nbsp; <a onclick='openWindow(settings);'>Personalize</a></li><hr />
+		<li>&nbsp; &nbsp; <a href="#">About HomeOS</a></li>
+	</ul> 
+</div> 
+<script type="text/javascript">
+var user = document.getElementById('user');
+var pic = document.getElementById('pic');
+var img = document.getElementById('img');
+var pcbrowser = document.getElementById('pcbrowser');
+var settings = document.getElementById('settings');
+
+function bgchange() {
+var url = document.getElementById('url').value;
+if(url == "" || url == null) {
+	document.body.style.background = "url(./wallpaper.png)";
+} else {
+	document.body.style.background = "url(" + url + ")";
+}};
+
+function applywpcolor() {
+var color = document.getElementById('wpcolor').value;
+	document.body.style.background = color;
+};
+
+function setSelectedColor(el, col) { el.style.backgroundColor = col; }
+function openWindow(variable) { variable.style.display = "block"; }
+function closeWindow(variable) { variable.style.display = "none"; }
+</script>
+</body>
+</html>
