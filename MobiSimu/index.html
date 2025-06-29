@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loading...</title>
+<style>
+html, body {
+ color: white;
+ background-color: black;
+}
+
+.loading {
+ position: fixed;
+ top:50%; left:50%;
+ transform:translate(-50%, -50%);
+}
+
+.loading text {
+ display: block;
+ text-align: center;
+ font: 35px cursive;
+}
+</style>
+</head>
+<body>
+<div class="loading">
+<text>mobisimu</text>
+<progress></progress>
+</div>
+<script>
+var goToMain = setTimeout(function() {
+ document.location = './main.html';
+},5500);
+</script>
+</body>
+</html>
