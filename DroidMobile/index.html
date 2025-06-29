@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Booting DroidMobile...</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<style>
+@font-face {
+ font-family: 'Gill Sans';
+ src: url(./files/default-font.ttf);
+}
+
+body {
+ color: white;
+ background-color: black;
+}
+
+.text {
+  position: fixed;
+  top: 45%; left: 0;
+  font-size: 25px;
+  font-style: italic;
+  animation: blink 4s linear;
+  animation-iteration-count: infinite;
+  font-family: 'Gill Sans';
+  transform: translate(20%, 0%);
+}
+
+@keyframes blink {
+ 0% { opacity: 1; }
+ 25% { opacity: 0; }
+ 50% { opacity: 1; }
+ 75% { opacity: 0; }
+ 100% { opacity: 1; }
+}
+</style>
+</head>
+<body>
+<div class="text"><script>
+let text = document.title;
+document.write(text);
+
+setTimeout(function() {
+ document.location = "main.html";
+}, 6000);
+</script></div>
+</body>
+</html>

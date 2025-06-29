@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DroidMobile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="./files/style.css" />
+<link rel="stylesheet" href="./files/mobile.css" />
+<script src="./files/script.js"></script>
+</head>
+<body>
+<audio id="stplay" src="./files/startupsnd.aac" muted autoplay></audio>
+<section class="page" id="lockscreen" style="display:block;background-color:rgba(0,0,0,0.12);">
+<div class="statusbar">
+<small style="float:left;" onclick="location.reload();">
+<icon class="fa fa-refresh">&nbsp;</icon><!--&#8910;--></small>
+<icon class="fa fa-wifi">&nbsp;</icon>
+<icon class="fa fa-plane">&nbsp;</icon>
+<icon class="fa fa-battery">&nbsp;</icon>
+<small>98%</small>&nbsp;</div>
+<div class="time">
+<p id="time"><script>writeTime();</script></p>
+<p id="date"><script>writeDate();</script></p>
+</div>
+<div class="unlock" onclick='hide("#lockscreen");show("#launcher", "block");'>
+Click to unlock <big>&raquo;</big></div>
+</section>
+<section id="launcher" 
+style="display:none;">
+<section id="lockscreen">
+<div class="statusbar">
+<small style="float:left;" onclick="location.reload();">
+<icon class="fa fa-refresh">&nbsp;</icon></small>
+<icon class="fa fa-wifi">&nbsp;</icon>
+<icon class="fa fa-plane">&nbsp;</icon>
+<icon class="fa fa-battery">&nbsp;</icon>
+<small>98%</small>&nbsp;</div>
+<div class="time" style="background-color:lightgrey;padding:20px;">
+<p id="time"><script>writeTime();</script></p>
+<p id="date"><script>writeDate();</script></p>
+</div>
+<div id="favappsbar">
+<icon><img src="./images/ios_phone.png" onclick="setHash('app=phone')" /></icon>
+<icon><img src="./images/ios_message.png" data-onclick="setHash('')" /></icon>
+<icon><img src="./images/ic_google.png" onclick="setHash('app=google')" /></icon>
+<icon><img src="./images/ic_drawer.png" data-onclick="setHash('')" /></icon>
+</div></section>
+<section class="page" id="app=phone">
+<div class="statusbar" style="background-color:grey;">
+<small style="float:left;" onclick="location.reload();">
+<icon class="fa fa-refresh">&nbsp;</icon></small>
+<icon class="fa fa-plane">&nbsp;</icon>
+<icon class="fa fa-battery">&nbsp;</icon>
+<small>98%</small>&nbsp;</div>
+<header class="toolbar">Phone</header>
+<main class="app">
+<input type="tel" id="pno" class="container" readonly /><br />
+<button type="button" onclick="addNumber(this.innerText);">1</button>
+<button type="button" onclick="addNumber(this.innerText);">2</button>
+<button type="button" onclick="addNumber(this.innerText);">3</button>
+ <br />
+<button type="button" onclick="addNumber(this.innerText);">4</button>
+<button type="button" onclick="addNumber(this.innerText);">5</button>
+<button type="button" onclick="addNumber(this.innerText);">6</button>
+ <br />
+<button type="button" onclick="addNumber(this.innerText);">7</button>
+<button type="button" onclick="addNumber(this.innerText);">8</button>
+<button type="button" onclick="addNumber(this.innerText);">9</button>
+ <br />
+<button type="button" onclick="addNumber(this.innerText);">*</button>
+<button type="button" onclick="addNumber(this.innerText);">0</button>
+<button type="button" onclick="addNumber(this.innerText);">#</button>
+  <br />
+<button onclick="redirect()" style="width:30%;"><icon class="fa fa-phone"></icon></button>
+<button onclick="subNumber(-1)" style="width:30%;">&times;</button>
+</main></section>
+<section class="page" id="app=google" style="overflow:hidden;">
+<div class="statusbar" style="background-color:grey;">
+<small style="float:left;" onclick="location.reload();">
+<icon class="fa fa-refresh">&nbsp;</icon></small>
+<icon class="fa fa-plane">&nbsp;</icon>
+<icon class="fa fa-battery">&nbsp;</icon>
+<small>98%</small>&nbsp;</div>
+<embed style="width:100%;height:1000px;" src="https://www.google.com/webhp?igu=1" />
+</section>
+</body>
+</html>
