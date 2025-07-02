@@ -1,0 +1,104 @@
+
+<html>
+<head><title>WhatsApp Assistant</title>
+<style>
+/* Copyright 2020 SSE Tech. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ */
+
+/* CSS for Test. */
+
+body {
+  font-family: Gill Sans MT, Helvetica, sans-serif;
+  background-color:  rgb(55, 205, 102);
+  margin: 0;
+}
+</style>
+
+
+<script>
+know = {
+
+"hi" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Hello there!",
+"hello" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Hi there!",
+"Hello" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Hi there!"
+"HELLO" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Hi there!",
+"Who are you?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp I am WhatsApp Assistant!",
+"How are you?" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp I am Fine.",
+"" : ""
+
+
+
+
+};
+
+function talk() {
+var user = document.getElementById("userBox").value;
+document.getElementById("userBox").value= "";
+document.getElementById("chatLog").innerHTML += user+"<br>";
+
+if (user in know) {
+document.getElementById("chatLog").innerHTML += know[user] + "<br>";
+} else 
+
+{
+document.getElementById("chatLog").innerHTML += "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp I don't understand... <br>";
+}
+}
+
+
+
+
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<hr>
+<center>
+<p id="chatLog"><h6>WhatsApp Assistant</h6><br>
+ </p>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+
+<p>
++ <img src="noimage.bmp">
+<input id="userBox" type="text" onkeydown="if(event.keyCode == 13) {talk()}" placeholder="Type a message...">
+<button onclick="talk()">Send</button>
+<hr>
+</center>
+
+
+</body>
+
+
+
+</html>
